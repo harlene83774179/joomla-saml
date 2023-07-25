@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
     ],
-    "hash": "48589fba88067fb1865e08006ab2a986",
+    "content-hash": "d1963c3a84b96c6a6da514617117a17f",
     "packages": [
         {
             "name": "openid/php-openid",
@@ -52,26 +53,34 @@
                 "auth",
                 "yadis"
             ],
-            "time": "2013-10-03 21:21:20"
+            "time": "2013-10-03T21:21:20+00:00"
         },
         {
             "name": "psr/log",
-            "version": "1.0.0",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.0"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -81,65 +90,59 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "robrichards/xmlseclibs",
-            "version": "1.3.1",
-            "source": {
-                "type": "svn",
-                "url": "http://xmlseclibs.googlecode.com/svn",
-                "reference": "trunk@50"
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "xmlseclibs.php"
-                ]
-            }
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "simplesamlphp/saml2",
-            "version": "v0.4.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "3eb0798f12c16c27f912aa594494ca17d9a30c56"
+                "reference": "bacad25473258cfefb7a7fd418cc5f8a22cda0a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/3eb0798f12c16c27f912aa594494ca17d9a30c56",
-                "reference": "3eb0798f12c16c27f912aa594494ca17d9a30c56",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/bacad25473258cfefb7a7fd418cc5f8a22cda0a1",
+                "reference": "bacad25473258cfefb7a7fd418cc5f8a22cda0a1",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
-                "ext-mcrypt": "*",
                 "ext-openssl": "*",
+                "ext-zlib": "*",
                 "php": ">=5.3.3",
-                "psr/log": "1.0.0",
-                "robrichards/xmlseclibs": "1.3.*"
+                "psr/log": "~1.0",
+                "simplesamlphp/xmlseclibs": "^2.0|^3.0"
             },
             "require-dev": {
+                "mockery/mockery": "~0.9",
                 "phpmd/phpmd": "~1.5",
                 "phpunit/phpunit": "~3.7",
+                "satooshi/php-coveralls": "~0.6.1",
                 "sebastian/phpcpd": "~1.4",
                 "sensiolabs/security-checker": "~1.1",
                 "squizlabs/php_codesniffer": "~1.4"
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/_autoload.php"
+                ],
                 "psr-0": {
-                    "SAML2_": "src/"
+                    "SAML2\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -149,34 +152,81 @@
             "authors": [
                 {
                     "name": "Andreas Åkre Solberg",
-                    "email": "andreas.solberg@uninett.no",
-                    "homepage": "http://rnd.feide.no",
-                    "role": "Developer"
+                    "email": "andreas.solberg@uninett.no"
                 }
             ],
             "description": "SAML2 PHP library from SimpleSAMLphp",
-            "time": "2014-02-26 11:19:09"
+            "support": {
+                "issues": "https://github.com/simplesamlphp/saml2/issues",
+                "source": "https://github.com/simplesamlphp/saml2/tree/master"
+            },
+            "time": "2017-08-17T12:44:35+00:00"
+        },
+        {
+            "name": "simplesamlphp/xmlseclibs",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/xmlsec.git",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/xmlsec/zipball/53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3"
+            },
+            "suggest": {
+                "ext/mcrypt": "MCrypt extension",
+                "ext/openssl": "OpenSSL extension"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\XMLSecLibs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "https://github.com/robrichards/xmlseclibs",
+            "keywords": [
+                "security",
+                "signature",
+                "xml",
+                "xmldsig"
+            ],
+            "support": {
+                "issues": "https://github.com/simplesamlphp/xmlsec/issues",
+                "source": "https://github.com/simplesamlphp/xmlsec/tree/2.0.1"
+            },
+            "abandoned": true,
+            "time": "2016-09-08T13:15:00+00:00"
         }
     ],
-    "packages-dev": [
-
-    ],
+    "packages-dev": [],
     "aliases": [
         {
-            "alias": "2.2.2",
-            "alias_normalized": "2.2.2.0",
+            "package": "openid/php-openid",
             "version": "9999999-dev",
-            "package": "openid/php-openid"
+            "alias": "2.2.2",
+            "alias_normalized": "2.2.2.0"
         }
     ],
     "minimum-stability": "stable",
     "stability-flags": {
         "openid/php-openid": 20
     },
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": "~5.3"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
